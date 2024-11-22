@@ -28,7 +28,7 @@ export default function Home({ allPostsData}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout home>
         <section className={utilStyle.headingMd}>
           <p className={utilStyle.leftStart}>
             プログラミング学習中 ! プログラミングスクールRUNTEQで Ruby on Rails を中心に学習。

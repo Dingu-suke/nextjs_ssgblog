@@ -2,12 +2,13 @@ import Head from 'next/head';
 import { Image } from 'next/image';
 import styles from "./layout.module.css";
 import  utilStyles  from '../styles/utils.module.css';
+import Link from "next/link";
 
 
 const name = "Dingu";
 export const siteTitle = "Next.js blog";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,6 +19,11 @@ const Layout = ({ children }) => {
         <h1 className={utilStyles.heading2Xl}>{name}</h1>
       </header>
       <main>{children}</main>
+      {!home && (
+        <div>
+          <Link href="/">⇐ホームへ戻る</Link>
+        </div>
+      )}
     </div>
   );
 }
